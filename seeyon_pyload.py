@@ -47,10 +47,7 @@ else:
 
 file_name = input(r"上传路径（默认为'..\..\..\ApacheJetspeed\webapps\seeyon\test666666.jsp'）：")
 
-if file_name:
-    file_name = pathEncrypt(file_name)
-else:
-    file_name = pathEncrypt()
+file_name = pathEncrypt(file_name) if file_name else pathEncrypt()
 
 content_length = str(len(file_name)+283)
 
